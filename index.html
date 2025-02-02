@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js" integrity="sha512-bcfltY+lNLlNxz38yBBm/HLaUB1gTV6I0e+fahbF9pS6roIdzUytozWdnFV8ZnM6cSAG5EbmO0ag0a/fLZSG4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/gh/GreyBeard42/pixels@main/script.js" defer></script> -->
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Pixels - GreyBeard42's Homepage</title>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+        <style>
+            body {
+                overflow: hidden;
+                user-select: none;
+                background: black;
+            }
+            #canvas {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+            a {
+                display: none;
+                color: white;
+                mix-blend-mode: difference;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="/javascript">Back</a>
+        <a> | </a>
+        <a>Really zoom in on an image's pixels. <a href='https://github.com/GreyBeard42/pixels'>Github</a> <input id=slider type=range min="width" max="width*700"> <select id="imgselect"><option selected>sistine</option><option>containerShip</option><option>mossyStream</option><option>lakeHills</option></select></a>
+        <a style='float: right;'>Febuary 2nd, 2025</a>
+        <div id="canvas"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
