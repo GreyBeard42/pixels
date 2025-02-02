@@ -39,14 +39,17 @@ function draw() {
     translate(width/2, height/2)
     for (let x = 0; x < imagee.width; x += 1) {
         for (let y = 0; y < imagee.height; y += 1) {
-            fill(360, 0, 0, imagee.get(x, y)[0])
+            //red
+            fill(360, 0, 0, imagee.get(x-1, y)[0])
             rect((x-xo)*zoom, (y-yo)*zoom, 1/6*zoom, 0.75*zoom)
 
-            fill(0, 360, 0, imagee.get(x, y)[1])
+            //blue (idk why this fixes the order)
+            fill(0, 0, 360, imagee.get(x-1, y)[2])
             rect((x+2/3-xo)*zoom, (y-yo)*zoom, 1/6*zoom, 0.75*zoom)
 
-            fill(0, 0, 360, imagee.get(x, y)[2])
-            rect((x+4/3-xo)*zoom, (y-yo)*zoom, 1/6*zoom, 0.75*zoom)
+            //green
+            fill(0, 360, 0, imagee.get(x, y)[1])
+            if(x != imagee.width-1) rect((x+4/3-xo)*zoom, (y-yo)*zoom, 1/6*zoom, 0.75*zoom)
         }
     }
 
